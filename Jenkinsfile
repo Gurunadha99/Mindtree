@@ -25,7 +25,7 @@ pipeline {
 		stage('Deployment') {
 	    	steps {
 				sh 'sshpass -p "swarna99" scp target/gamutkart.war swarna@172.17.0.3:/home/softwaers/apache-tomcat-8.5.43/webapps'                                   
-				sh 'sshpass -p "swarna99" ssh swarna@172.17.0.3 "JAVA_HOME=/home/softwaers/jdk1.8.0_221" "/home/softwaers/apache-tomcat-8.5.43/bin/startup.sh'"
+				sh 'sshpass -p "swarna99" ssh swarna@172.17.0.3 "JAVA_HOME=/home/softwaers/jdk1.8.0_221" "/home/softwaers/apache-tomcat-8.5.43/bin/startup.sh"'
 	        	}
 		}
     }
